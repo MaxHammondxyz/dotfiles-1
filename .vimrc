@@ -33,7 +33,7 @@ highlight ColorColumn ctermbg=DarkGrey
 
 " Misc.
 set number
-syntax off
+syntax on
 
 " STOP BEEPING OMG
 set noeb vb t_vb=
