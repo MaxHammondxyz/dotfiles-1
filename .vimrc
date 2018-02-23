@@ -20,6 +20,7 @@ Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'mitsuhiko/vim-python-combined'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'jmcantrell/vim-virtualenv'
+Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -27,13 +28,10 @@ filetype on
 filetype plugin on
 filetype plugin indent on
 
-" Colorcollumn
-set colorcolumn=80
-highlight ColorColumn ctermbg=DarkGrey
 
 " Misc.
 set number
-syntax on
+syntax on 
 
 " STOP BEEPING OMG
 set noeb vb t_vb=
@@ -56,6 +54,8 @@ set expandtab
 
 " Remap leader key
 let mapleader = ","
+
+" Colorscheme
 
 " Nerdtree
 au vimEnter * NERDTree
