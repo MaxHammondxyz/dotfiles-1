@@ -31,21 +31,10 @@ filetype plugin indent on
 
 " Misc.
 set number
-syntax on 
+syntax off
 
 " STOP BEEPING OMG
 set noeb vb t_vb=
-
-" Remap movement for Colemak
-noremap n j
-noremap e k
-noremap i l
-noremap k n
-noremap s i
-noremap j e
-
-" Other rebindings
-noremap <C-i> i
 
 " Tabs
 set tabstop=4       
