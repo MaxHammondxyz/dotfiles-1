@@ -1,51 +1,58 @@
-set nocompatible              " required
-filetype off                  " required
-set hidden
-set showtabline=0
+"                           _
+"                    __   _(_)_ __ ___  _ __ ___
+"                    \ \ / / | '_ ` _ \| '__/ __|
+"                     \ V /| | | | | | | | | (__
+"                      \_/ |_|_| |_| |_|_|  \___|
+"
+" Plugins
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin()
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+	Plugin 'VundleVim/Vundle.vim'
+	Plugin 'flazz/vim-colorschemes'
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+	call vundle#end()
+	filetype plugin indent on
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" Some basics
+	set number
+	set relativenumber
+	set cursorline
+	set ruler
+	set nocompatible
+	filetype off
 
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-"-------------------=== Plugins ===-------------
-Plugin 'scrooloose/nerdtree'              
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'mitsuhiko/vim-python-combined'
-Plugin 'mitsuhiko/vim-jinja'
-Plugin 'jmcantrell/vim-virtualenv'
-Plugin 'flazz/vim-colorschemes'
+" Searching
+	set incsearch
+	set hlsearch
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype on
-filetype plugin on
-filetype plugin indent on
-
-
-" Misc.
-set number
-syntax off
-
-" STOP BEEPING OMG
-set noeb vb t_vb=
+" Leader Shortcuts
+	let mapleader=","
+	inoremap jk <esc>
 
 " Tabs
-set tabstop=4       
-set shiftwidth=4      
-set expandtab         
+	set shiftwidth=4
+	set tabstop=4
+	set noexpandtab
+	set autoindent
 
-" Remap leader key
-let mapleader = ","
+" Make backspace behave like any other editor
+	set backspace=indent,eol,start
+	set encoding=utf-8
 
-" Colorscheme
+" Combine the vim clipboard with the regular clipboard
+	set clipboard=unnamed
 
-" Nerdtree
-au vimEnter * NERDTree
-let g:NERDTreeWinPos = "right"
+" Key remapings
+	nnoremap <c-j> <c-w>j
+	nnoremap <c-k> <c-w>k
+	nnoremap <c-h> <c-w>h
+	nnoremap <c-l> <c-w>l
+
+" SOLARIZE EVERYTHING
+	colorscheme solarized
+	set background=dark
+	set colorcolumn=80
+	syntax on
+	filetype indent on
+
